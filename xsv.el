@@ -66,7 +66,6 @@ Return the xsv command for the given `FILTER'."
        (insert content)))
 
    (setq command (funcall cmd-builder input csv-file))
-   (message "command: %s" command)
    (setq buf (get-buffer-create (generate-new-buffer-name "*xsv*")))
    (set-buffer buf)
    (setq result (shell-command-to-string command))

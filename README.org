@@ -18,3 +18,27 @@ Some examples are:
 
 xsv provides much more functionalities than I need, but I think I will bring in more and
 more into the package to make it even more useful.
+
+* filter the rows in CSV file
+Once package is loaded, run ~M-x xsv/filter~ on a buffer visiting csv file or buffer
+contain valid csv format content and it will ask for the input to be used for
+filtering.
+
+The input can contain multiple criteria and each criteria should be in one of
+these following syntax:
+- columnA = 'regexA'
+- columnB != 'regexB'
+
+First one means search columnA where its value match regexA.
+Second form means search columnB where its value NOT match regexB.
+
+Criteria can be joined by using `&' like this:
+#+begin_example
+columnA = 'regexA' & columnB = 'regexB' & columnC != 'regexC'
+#+end_example
+
+It means return rows where columnA matches regexA AND columnB matches regexB AND
+columnC NOT matches regexC.
+
+The filtered result will be presented in a different buffer with prefix ~xsv-~ so
+the original buffer/file are left untouched.

@@ -32,7 +32,14 @@ these following syntax:
 First one means search columnA where its value match regexA.
 Second form means search columnB where its value NOT match regexB.
 
-Criteria can be joined by using `&' like this:
+In the case where column name contains spaces, you need to *single quote* it:
+#+begin_example
+'transaction type' = 'debit'
+#+end_example
+
+You will always need to single quote the value.
+
+Criteria can be joined by using ~&~ like this:
 #+begin_example
 columnA = 'regexA' & columnB = 'regexB' & columnC != 'regexC'
 #+end_example

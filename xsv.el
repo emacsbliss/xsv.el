@@ -28,7 +28,7 @@
 (defun xsv/parse-filter (filter)
   "Parse the given `FILTER' which specifies a criteria for xsv search into
 internal format."
-  (let* ((pattern "\\(\\w+\\) *\\(!?=\\) *\\('.*'\\)")
+  (let* ((pattern "\\('?.*'?\\) *\\(!?=\\) *\\('.*'\\)")
         (matching (s-match pattern filter)))
 
     (if matching

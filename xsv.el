@@ -7,7 +7,7 @@
 ;; Version: 0.0.1
 ;; Keywords: csv xsv
 ;; Homepage: https://github.com/emacsbliss/xsv.el
-;; Package-Requires: ((emacs 28.0.50) (cl-lib "0.5") (s.el 1.12.0) (dash.el 2.18.0))
+;; Package-Requires: ((emacs 28.0.50) (cl-lib "0.5") (s "1.12.0") (dash "2.18.0"))
 ;;
 ;; This file is not part of GNU Emacs.
 ;;
@@ -17,6 +17,9 @@
 ;;  Front end for xsv, enhance the experience for working with csv in Emacs.
 ;;
 ;;; Code:
+
+(require 's)
+(require 'dash)
 
 (defun xsv/split-filters (filters)
   "Split multiple criteria from `FILTERS' separated by `&'."

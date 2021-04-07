@@ -49,3 +49,18 @@ columnC NOT matches regexC.
 
 The filtered result will be presented in a different buffer with prefix ~xsv-~ so
 the original buffer/file are left untouched.
+
+* select certain columns in CSV file
+Run ~M-x xsv/select~ then enter the columns interested. Note you need to *single quote* the column name
+if there is space in it. Also column names should be separated by ~,~ and there is *NO* space around the
+separator. The column name is *case sensitive*.
+
+For eg, this works:
+#+begin_example
+Date,'Transaction Type'
+#+end_example
+
+This will NOT work (due to extra space after ,):
+#+begin_example
+Date, 'Transaction Type'
+#+end_example

@@ -1,0 +1,7 @@
+
+* xsv.el
+xsv.el is a front end for CSV toolkit [[https://github.com/BurntSushi/xsv][xsv]]. xsv provides very powerful ways to
+work with CSV file and xsv.el brings that awesomeness into Emacs.
+
+* installation
+For now, either clone the repo and add to load-path or use package manager like straight.

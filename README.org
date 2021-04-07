@@ -1,7 +1,20 @@
-
 * xsv.el
 xsv.el is a front end for CSV toolkit [[https://github.com/BurntSushi/xsv][xsv]]. xsv provides very powerful ways to
 work with CSV file and xsv.el brings that awesomeness into Emacs.
 
 * installation
 For now, either clone the repo and add to load-path or use package manager like straight.
+
+* Why
+Emacs has CSV mode to work with CSV files, it has nice things but I find it
+lacking certain functionality I want and I have to resort to Numbers/Excel from
+time to time.
+
+After I discovered the xsv, I realize it could bridge the gap I encountered before.
+
+Some examples are:
+- I want to filter the csv file to show only rows where certain columns match my criteria
+- I want to only view columns I'm interested
+
+xsv provides much more functionalities than I need, but I think I will bring in more and
+more into the package to make it even more useful.
